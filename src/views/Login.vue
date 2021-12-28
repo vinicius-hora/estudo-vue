@@ -16,9 +16,9 @@
         </v-form>
       </v-card-text>
       <v-card-actions> 
-        <v-btn color="success">Login</v-btn>
+        <v-btn color="success" >Login</v-btn>
         <v-spacer></v-spacer>
-        <v-btn color="info" >Register</v-btn>
+        <v-btn color="info" to="/register"> Register</v-btn>
       </v-card-actions>
     </v-card>
 </template>
