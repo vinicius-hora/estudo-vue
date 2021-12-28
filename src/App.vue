@@ -16,29 +16,8 @@
     </v-app-bar>
     <!-- login -->
    <v-main>
-    <v-card width="500" class="mx-auto mt-5">
-
-      <v-card-tittle>
-        <h1 class="display-1"> Login</h1>
-      </v-card-tittle>
-      <v-card-text>
-        <v-form>
-          <v-text-field label= "Username" prepend-icon="mdi-account-circle"></v-text-field>
-          <v-text-field label= "Password" 
-            prepend-icon="mdi-form-textbox-lock" 
-            :append-icon="exibir ? 'mdi-eye-off' : 'mdi-eye' "
-            :type="exibir ? 'text' : 'password'" 
-            @click:append="exibirSenha">
-          </v-text-field>
-        </v-form>
-      </v-card-text>
-      <v-card-actions> 
-        <v-btn color="success">Login</v-btn>
-        <v-spacer></v-spacer>
-        <v-btn color="info" >Register</v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-main>
+    <router-view> </router-view> 
+    </v-main>
   <v-footer
     color="primary lighten-1"
     padless
@@ -79,13 +58,11 @@ export default {
     
   },
   methods: {
-    exibirSenha() {
-      this.exibir = !this.exibir;
-    }
+   
   },
 
   data: () => ({
-    exibir: true, 
+    
     links: [
         'Home',
         'Login',
